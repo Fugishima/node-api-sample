@@ -21,6 +21,7 @@
   "dependencies": {
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
+    "marked": "^4.0.12",
     "mysql2": "^2.3.3",
     "sequelize": "^6.16.1"
   },
