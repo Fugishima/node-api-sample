@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Fugishima/node-api-sample#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
     "marked": "^4.0.12",
