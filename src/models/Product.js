@@ -6,7 +6,8 @@ class Product extends Model {
               name: DataTypes.STRING
             , price: DataTypes.DECIMAL
         }, {
-            sequelize
+              sequelize
+            , tableName: 'Products'
         })
     }
 

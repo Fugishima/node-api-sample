@@ -5,7 +5,8 @@ class Client extends Model {
         super.init({
             adress: DataTypes.STRING
         }, {
-            sequelize
+              sequelize
+            , tableName: 'Clients'
         })
     }
 

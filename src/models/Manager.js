@@ -5,7 +5,8 @@ class Manager extends Model {
         super.init({
             salary: DataTypes.DECIMAL
         }, {
-            sequelize
+              sequelize
+            , tableName: 'Managers'
         })
     }
 

@@ -5,7 +5,8 @@ class Stock extends Model {
         super.init({
             amount: DataTypes.INTEGER
         }, {
-            sequelize
+              sequelize
+            , tableName: 'Stock'
         })
     }
 

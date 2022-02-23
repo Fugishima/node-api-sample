@@ -5,7 +5,8 @@ class Order extends Model {
         super.init({
             ordered_products: DataTypes.JSON
         }, {
-            sequelize
+              sequelize
+            , tableName: 'Orders'
         })
     }
 
