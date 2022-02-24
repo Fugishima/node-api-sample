@@ -8,6 +8,12 @@ class ClientsRepository {
             }
         })
     }
+
+    static createClient(ClientData) {
+        return Client.create(ClientData, {
+            fields: ['users_id', 'adress']
+        })
+    }
 }
 
 module.exports = ClientsRepository

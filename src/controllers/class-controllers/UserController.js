@@ -48,6 +48,19 @@ class UserController {
             return { code: 500 }
         }
     }
+
+    static async createClientUser(UserData, ClientData) {
+        try {
+            await UsersRepository.createClientUser(UserData, ClientData)
+            return { code: 201 }
+        } catch (error) {
+            if (error.original.code === 'ER_DUP_ENTRY') {
+                return { code: 409 }
+            } else {
+                return { code: 500 }
+            }
+        }
+    }
 }
 
 module.exports = UserController
