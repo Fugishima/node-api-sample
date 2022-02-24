@@ -8,6 +8,12 @@ class ManagersRepository {
             }
         })
     }
+
+    static createManager(ManagerData) {
+        return Manager.create(ManagerData, {
+            fields: ['users_id', 'salary']
+        })
+    }
 }
 
 module.exports = ManagersRepository

@@ -61,6 +61,19 @@ class UserController {
             }
         }
     }
+
+    static async createManagerUser(UserData, ManagerData) {
+        try {
+            await UsersRepository.createManagerUser(UserData, ManagerData)
+            return { code: 201 }
+        } catch (error) {
+            if (error.original.code === 'ER_DUP_ENTRY') {
+                return { code: 409 }
+            } else {
+                return { code: 500 }
+            }
+        }
+    }
 }
 
 module.exports = UserController
