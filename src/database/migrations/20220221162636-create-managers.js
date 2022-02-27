@@ -18,9 +18,11 @@ module.exports = {
                     key: 'id'
                 }
                 , allowNull: false
+                , onUpdate: 'CASCADE'
+                , onDelete: 'CASCADE'
             },
             salary: {
-                  type: Sequelize.DECIMAL
+                  type: Sequelize.DECIMAL(10,2)
                 , allowNull: false
             },
             created_at: {
