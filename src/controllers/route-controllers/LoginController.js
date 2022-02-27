@@ -12,7 +12,8 @@ class LoginController {
                 const userRoles = await UserController.userRoles(isAuthenticated.User.id)
                 if (userRoles.code === 200) {
                     const token = jwt.sign({
-                          name: isAuthenticated.User.name
+                          id: isAuthenticated.User.id
+                        , name: isAuthenticated.User.name
                         , email: isAuthenticated.User.email
                         , Manager: userRoles.Manager
                         , Client: userRoles.Client
